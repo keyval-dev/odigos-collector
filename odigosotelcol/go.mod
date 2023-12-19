@@ -65,6 +65,7 @@ require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/extension/observer/k8sobserver v0.91.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/extension/opampextension v0.91.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/extension/pprofextension v0.91.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/odigos/processor/odigosresourcenameprocessor v0.91.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor v0.91.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/processor/cumulativetodeltaprocessor v0.91.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/processor/datadogprocessor v0.91.0
@@ -485,6 +486,7 @@ require (
 	k8s.io/client-go v0.28.4 // indirect
 	k8s.io/klog/v2 v2.100.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20230717233707-2695361300d9 // indirect
+	k8s.io/kubelet v0.26.1 // indirect
 	k8s.io/utils v0.0.0-20230711102312-30195339c3c7 // indirect
 	sigs.k8s.io/controller-runtime v0.16.3 // indirect
 	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd // indirect
@@ -492,3 +494,5 @@ require (
 	sigs.k8s.io/yaml v1.3.0 // indirect
 	skywalking.apache.org/repo/goapi v0.0.0-20231026090926-09378dd56587 // indirect
 )
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/odigos/processor/odigosresourcenameprocessor => ../processors/odigosresourcenameprocessor

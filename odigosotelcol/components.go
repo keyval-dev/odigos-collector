@@ -76,6 +76,7 @@ import (
 	dockerobserver "github.com/open-telemetry/opentelemetry-collector-contrib/extension/observer/dockerobserver"
 	opampextension "github.com/open-telemetry/opentelemetry-collector-contrib/extension/opampextension"
 	pprofextension "github.com/open-telemetry/opentelemetry-collector-contrib/extension/pprofextension"
+	odigosresourcenameprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/odigos/processor/odigosresourcenameprocessor"
 	batchprocessor "go.opentelemetry.io/collector/processor/batchprocessor"
 	memorylimiterprocessor "go.opentelemetry.io/collector/processor/memorylimiterprocessor"
 	attributesprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor"
@@ -190,6 +191,7 @@ func components() (otelcol.Factories, error) {
 	}
 
 	factories.Processors, err = processor.MakeFactoryMap(
+		odigosresourcenameprocessor.NewFactory(),
 		batchprocessor.NewFactory(),
 		memorylimiterprocessor.NewFactory(),
 		attributesprocessor.NewFactory(),
